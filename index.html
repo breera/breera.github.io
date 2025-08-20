@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breera Hanif — Sr. Android Engineer Portfolio</title>
+  <meta name="description" content="Android developer portfolio: projects, experience, skills, and contact on one page." />
+  <!-- Open Graph (optional) -->
+  <meta property="og:title" content="Breera Hanif — Sr. Android Engineer" />
+  <meta property="og:description" content="Android developer portfolio: projects, experience, skills, and contact on one page." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/1200/630" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <!-- Skip link for accessibility -->
+  <a href="#home" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-white focus:ring focus:px-3 focus:py-1 rounded">Skip to content</a>
+
+  <!-- Navbar -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b bg-white/80 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="font-semibold tracking-tight">.dev</a>
+        <button id="menuBtn" class="lg:hidden p-2" aria-label="Open Menu" aria-expanded="false">
+          <!-- Hamburger icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <nav id="nav" class="hidden lg:block">
+          <ul class="flex items-center gap-6">
+            <li><a class="nav-link hover:text-indigo-600" href="#projects">Projects</a></li>
+            <li><a class="nav-link hover:text-indigo-600" href="#experience">Experience</a></li>
+            <li><a class="nav-link hover:text-indigo-600" href="#skills">Skills</a></li>
+            <li><a class="nav-link hover:text-indigo-600" href="#contact">Contact</a></li>
+            <li><a class="rounded-xl border px-3 py-1.5 hover:bg-slate-50" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Mobile menu -->
+      <nav id="mobileMenu" class="hidden border-t lg:hidden">
+        <ul class="flex flex-col py-2">
+          <li><a class="block px-3 py-2 nav-link" href="#projects">Projects</a></li>
+          <li><a class="block px-3 py-2 nav-link" href="#experience">Experience</a></li>
+          <li><a class="block px-3 py-2 nav-link" href="#skills">Skills</a></li>
+          <li><a class="block px-3 py-2 nav-link" href="#contact">Contact</a></li>
+          <li><a class="block px-3 py-2" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="pt-24">
+    <section class="mx-auto max-w-6xl px-4">
+      <div class="grid items-center gap-8 md:grid-cols-2">
+        <div>
+          <h1 class="text-3xl font-bold leading-tight md:text-5xl">Hi, I'm <span class="text-indigo-600">Breera Hanif</span> — Sr. Android Engineer</h1>
+          <p class="mt-4 text-lg text-slate-600">I build fast, reliable mobile apps with Kotlin, Jetpack Compose, and modern Android architecture. I care about delightful UX, performance, and clean code.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#projects" class="rounded-2xl bg-indigo-600 px-5 py-3 text-white shadow hover:bg-indigo-700">View Projects</a>
+            <a href="#contact" class="rounded-2xl border px-5 py-3 hover:bg-slate-50">Contact Me</a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-slate-500">
+            <a class="underline hover:text-slate-700" href="https://github.com/breera" target="_blank" rel="noopener">GitHub</a>
+            <a class="underline hover:text-slate-700" href="https://www.linkedin.com/in/breera-hanif-1631b7135/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="underline hover:text-slate-700" href="https://medium.com/@breerahanif62" target="_blank" rel="noopener">Medium</a>
+            <a class="underline hover:text-slate-700" href="mailto:breerahanif62@gmail.com">Email</a>
+          </div>
+        </div>
+        <img src="https://picsum.photos/seed/androiddev/640/420" alt="Preview of Android apps" class="rounded-2xl shadow" />
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="scroll-mt-24 py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-semibold md:text-3xl">Featured Projects</h2>
+        <p class="mt-2 text-slate-600">A selection of Android projects. Each card links to the repository and a brief write‑up.</p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Project Card 1 -->
+          <article class="group rounded-2xl border p-4 transition hover:shadow">
+            <img class="rounded-xl" src="https://picsum.photos/seed/offline/600/360" alt="Project screenshot" />
+            <h3 class="mt-4 text-lg font-semibold">Sales & Distribution App</h3>
+            <p class="mt-1 text-sm text-slate-600">Offline‑first Android app with auto‑sync and analytics dashboard for field teams.</p>
+            <ul class="mt-2 flex flex-wrap gap-2 text-xs text-slate-500">
+              <li class="rounded-full bg-slate-100 px-2 py-1">Kotlin</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Room</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">WorkManager</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Compose</li>
+            </ul>
+            <div class="mt-4 flex gap-3">
+              <a href="https://github.com/yourusername/project-one" target="_blank" rel="noopener" class="text-indigo-600 underline">Repo</a>
+              <a href="#" class="text-slate-700 underline">Case Study</a>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="group rounded-2xl border p-4 transition hover:shadow">
+            <img class="rounded-xl" src="https://picsum.photos/seed/fintech/600/360" alt="Project screenshot" />
+            <h3 class="mt-4 text-lg font-semibold">Fintech Wallet</h3>
+            <p class="mt-1 text-sm text-slate-600">Secure wallet with biometric auth, QR payments, and transaction insights.</p>
+            <ul class="mt-2 flex flex-wrap gap-2 text-xs text-slate-500">
+              <li class="rounded-full bg-slate-100 px-2 py-1">Kotlin</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Hilt</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Coroutines/Flow</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Compose</li>
+            </ul>
+            <div class="mt-4 flex gap-3">
+              <a href="https://github.com/yourusername/project-two" target="_blank" rel="noopener" class="text-indigo-600 underline">Repo</a>
+              <a href="#" class="text-slate-700 underline">Case Study</a>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="group rounded-2xl border p-4 transition hover:shadow">
+            <img class="rounded-xl" src="https://picsum.photos/seed/flutter/600/360" alt="Project screenshot" />
+            <h3 class="mt-4 text-lg font-semibold">Flutter Companion</h3>
+            <p class="mt-1 text-sm text-slate-600">Cross‑platform app demonstrating feature parity and native integrations.</p>
+            <ul class="mt-2 flex flex-wrap gap-2 text-xs text-slate-500">
+              <li class="rounded-full bg-slate-100 px-2 py-1">Flutter</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Dart</li>
+              <li class="rounded-full bg-slate-100 px-2 py-1">Bloc</li>
+            </ul>
+            <div class="mt-4 flex gap-3">
+              <a href="https://github.com/yourusername/project-three" target="_blank" rel="noopener" class="text-indigo-600 underline">Repo</a>
+              <a href="#" class="text-slate-700 underline">Case Study</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="scroll-mt-24 border-t py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-semibold md:text-3xl">Experience</h2>
+        <ol class="mt-8 space-y-6">
+          <li class="rounded-2xl border p-4">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-semibold">Android Developer — Company Name</h3>
+              <span class="text-sm text-slate-500">2022 — Present</span>
+            </div>
+            <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-700">
+              <li>Shipped Android features with Kotlin, Compose, Hilt, and Coroutines.</li>
+              <li>Implemented offline‑first sync and analytics, improving field efficiency.</li>
+              <li>Collaborated with designers/PMs in Scrum to meet sprint goals.</li>
+            </ul>
+          </li>
+          <li class="rounded-2xl border p-4">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-semibold">Mobile Engineer — Previous Company</h3>
+              <span class="text-sm text-slate-500">2019 — 2022</span>
+            </div>
+            <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-700">
+              <li>Maintained Kotlin MVVM app with CI/CD and crash monitoring.</li>
+              <li>Improved cold‑start, ANR, and battery performance.</li>
+              <li>Mentored juniors; code reviews for quality and consistency.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="scroll-mt-24 border-t py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-semibold md:text-3xl">Skills</h2>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl border p-4">
+            <h3 class="font-semibold">Languages</h3>
+            <p class="mt-2 text-slate-600">Kotlin, Java, Dart</p>
+          </div>
+          <div class="rounded-2xl border p-4">
+            <h3 class="font-semibold">Android</h3>
+            <p class="mt-2 text-slate-600">Compose, MVVM, Room, Hilt, Retrofit, WorkManager</p>
+          </div>
+          <div class="rounded-2xl border p-4">
+            <h3 class="font-semibold">Tooling</h3>
+            <p class="mt-2 text-slate-600">Android Studio, Git, Gradle, Firebase, Crashlytics</p>
+          </div>
+          <div class="rounded-2xl border p-4">
+            <h3 class="font-semibold">Cross‑platform</h3>
+            <p class="mt-2 text-slate-600">Flutter, Bloc, REST, GraphQL</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="scroll-mt-24 border-t py-20">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-2xl font-semibold md:text-3xl">Contact</h2>
+        <p class="mt-2 text-slate-600">Have a project or role in mind? Reach out.</p>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <form class="rounded-2xl border p-4" name="contact" netlify>
+            <label class="block text-sm">Name
+              <input class="mt-1 w-full rounded-xl border px-3 py-2" type="text" name="name" required />
+            </label>
+            <label class="mt-4 block text-sm">Email
+              <input class="mt-1 w-full rounded-xl border px-3 py-2" type="email" name="email" required />
+            </label>
+            <label class="mt-4 block text-sm">Message
+              <textarea class="mt-1 w-full rounded-xl border px-3 py-2" name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="mt-4 rounded-2xl bg-indigo-600 px-5 py-2.5 text-white hover:bg-indigo-700">Send</button>
+          </form>
+
+          <div class="rounded-2xl border p-4">
+            <ul class="space-y-3 text-slate-700">
+              <li><strong>Email:</strong> <a class="underline" href="mailto:you@example.com">breerahanif62@gmail.com</a></li>
+              <li><strong>GitHub:</strong> <a class="underline" href="https://github.com/breera" target="_blank" rel="noopener">https://github.com/breera</a></li>
+              <li><strong>Medium:</strong> <a class="underline" href="https://medium.com/@breerahanif62" target="_blank" rel="noopener">https://medium.com/@breerahanif62</a></li>
+              <li><strong>LinkedIn:</strong> <a class="underline" href="https://www.linkedin.com/in/breera-hanif-1631b7135/" target="_blank" rel="noopener">https://www.linkedin.com/in/breera-hanif-1631b7135/</a></li>
+              <li><strong>Location:</strong> Lahore, Punjab, Pakistan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t py-10">
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-500">
+      <p>© <span id="year"></span> Breera Built with HTML + Tailwind. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Active nav link on scroll
+    const links = document.querySelectorAll('.nav-link');
+    const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = document.querySelector(`a[href="${id}"]`);
+        if (link) {
+          if (entry.isIntersecting) {
+            links.forEach(a => a.classList.remove('text-indigo-600'));
+            link.classList.add('text-indigo-600');
+          }
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(sec => observer.observe(sec));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
