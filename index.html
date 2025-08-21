@@ -34,13 +34,13 @@
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex h-16 items-center justify-between">
         <a href="#home" class="font-semibold tracking-tight">Home</a>
-        <button id="menuBtn" class="lg:hidden p-2" aria-label="Open Menu" aria-expanded="false">
-          <!-- Hamburger icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button id="menuBtn" class="lg:hidden p-2 relative w-8 h-8 flex flex-col justify-between items-center"
+          aria-label="Open Menu" aria-expanded="false">
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
         </button>
+
         <nav id="nav" class="hidden lg:block">
           <ul class="flex items-center gap-6">
             <li><a class="nav-link hover:text-indigo-600" href="#projects">Projects</a></li>
@@ -53,7 +53,8 @@
         </nav>
       </div>
       <!-- Mobile menu -->
-      <nav id="mobileMenu" class="hidden border-t lg:hidden">
+      <nav id="mobileMenu"
+        class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out md:hidden bg-slate-800 rounded-xl mt-2">
         <ul class="flex flex-col py-2">
           <li><a class="block px-3 py-2 nav-link" href="#projects">Projects</a></li>
           <li><a class="block px-3 py-2 nav-link" href="#experience">Experience</a></li>
@@ -69,15 +70,16 @@
   <main id="home" class="pt-24">
     <section class="mx-auto max-w-6xl px-4 bg-slate-900">
       <div class="grid items-center gap-8 md:grid-cols-2">
+        <!-- Left Content -->
         <div>
-          <h1 href="#home" class="font-semibold tracking-tight text-slate-400">
+          <h1 class="font-semibold tracking-tight text-slate-400">
             This portfolio is currently under development
           </h1>
           <h1 class="text-3xl font-bold leading-tight text-slate-100 md:text-5xl">
             Hi, I'm <span class="text-indigo-500">Breera Hanif</span> — Sr. Android Engineer
           </h1>
           <p class="mt-4 text-lg text-slate-300">
-            I specialize in creating intuitive, high-performance mobile applications across the fintech, e-commerce,
+            I'm specialized in creating intuitive, high-performance mobile applications across the fintech, e-commerce,
             B2B, B2C, FMCG sectors and more.
             With a focus on user experience and innovative solutions, I transform ideas into functional, seamless apps
             tailored for today’s mobile-first world.
@@ -90,66 +92,70 @@
               Contact Me
             </a>
           </div>
-          <div class="mt-6 flex items-center gap-4 text-sm text-slate-400">
-            <div class="mt-6 flex items-center gap-4 text-slate-400">
-              <!-- GitHub -->
-              <a href="https://github.com/breera" target="_blank" rel="noopener"
-                class="hover:text-white transition-colors" title="Github">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.205 11.387.6.111.82-.261.82-.579
-               0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
-               1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.466-1.334-5.466-5.931
-               0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404
-               c1.018.005 2.045.138 3.003.404 2.293-1.552 3.299-1.23 3.299-1.23.655 1.653.243 2.873.119 3.176.77.84 
-               1.235 1.911 1.235 3.221 0 4.609-2.805 5.625-5.479 5.921.43.371.823 1.102.823 2.222
-               0 1.606-.015 2.899-.015 3.293 0 .321.216.694.825.576C20.565 21.796 24 17.297 
-               24 12c0-6.63-5.373-12-12-12z" />
-                </svg>
-              </a>
 
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/breera-hanif-1631b7135/" target="_blank" rel="noopener"
-                class="hover:text-white transition-colors" title="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
-                  <path d="M20.447 20.452h-3.554V14.82c0-1.343-.027-3.072-1.872-3.072-1.872 
-               0-2.159 1.46-2.159 2.969v5.735H9.307V9h3.414v1.561h.049c.476-.9 
-               1.637-1.848 3.37-1.848 3.604 0 4.269 2.373 4.269 5.458v6.281zM5.337 
-               7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 
-               20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 
-               1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 
-               23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" />
-                </svg>
-              </a>
+          <!-- Social Links -->
+          <div class="mt-6 flex items-center gap-4 text-slate-400">
+            <!-- GitHub -->
+            <a href="https://github.com/breera" target="_blank" rel="noopener"
+              class="hover:text-white transition-colors" title="Github">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.205 11.387.6.111.82-.261.82-.579
+              0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
+              1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.466-1.334-5.466-5.931
+              0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404
+              c1.018.005 2.045.138 3.003.404 2.293-1.552 3.299-1.23 3.299-1.23.655 1.653.243 2.873.119 3.176.77.84 
+              1.235 1.911 1.235 3.221 0 4.609-2.805 5.625-5.479 5.921.43.371.823 1.102.823 2.222
+              0 1.606-.015 2.899-.015 3.293 0 .321.216.694.825.576C20.565 21.796 24 17.297 
+              24 12c0-6.63-5.373-12-12-12z" />
+              </svg>
+            </a>
 
-              <!-- Medium -->
-              <a href="https://medium.com/@breerahanif62" target="_blank" rel="noopener"
-                class="hover:text-white transition-colors" title="Medium">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 1043.63 592.71"
-                  class="h-6 w-6">
-                  <path d="M588.67 296.35c0 163.73-131.68 296.36-294.33 296.36S0 460.08 0 
-               296.35 131.68 0 294.34 0s294.33 132.62 294.33 296.35zm298.1 
-               0c0 154.16-65.84 279.24-147 279.24s-147-125.08-147-279.24 
-               65.84-279.24 147-279.24 147 125.08 147 279.24zM1043.63 
-               296.35c0 139.04-23.36 251.69-52.18 251.69s-52.18-112.65-52.18-251.69 
-               23.36-251.69 52.18-251.69 52.18 112.65 52.18 251.69z" />
-                </svg>
-              </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/breera-hanif-1631b7135/" target="_blank" rel="noopener"
+              class="hover:text-white transition-colors" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                <path d="M20.447 20.452h-3.554V14.82c0-1.343-.027-3.072-1.872-3.072-1.872 
+              0-2.159 1.46-2.159 2.969v5.735H9.307V9h3.414v1.561h.049c.476-.9 
+              1.637-1.848 3.37-1.848 3.604 0 4.269 2.373 4.269 5.458v6.281zM5.337 
+              7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 
+              20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 
+              1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 
+              23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" />
+              </svg>
+            </a>
 
-              <!-- Email -->
-              <a href="mailto:breerahanif62@gmail.com?subject=Contact%20from%20Portfolio"
-                class="hover:text-white transition-colors" title="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
-                  <path d="M1.5 4.5h21v15h-21v-15zm1.5 2.25v.511l9 6.364 9-6.364v-.511h-18zm18 
-               10.5v-7.186l-9 6.364-9-6.364v7.186h18z" />
-                </svg>
-              </a>
-            </div>
+            <!-- Medium -->
+            <a href="https://medium.com/@breerahanif62" target="_blank" rel="noopener"
+              class="hover:text-white transition-colors" title="Medium">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 1043.63 592.71" class="h-6 w-6">
+                <path d="M588.67 296.35c0 163.73-131.68 296.36-294.33 296.36S0 460.08 0 
+              296.35 131.68 0 294.34 0s294.33 132.62 294.33 296.35zm298.1 
+              0c0 154.16-65.84 279.24-147 279.24s-147-125.08-147-279.24 
+              65.84-279.24 147-279.24 147 125.08 147 279.24zM1043.63 
+              296.35c0 139.04-23.36 251.69-52.18 251.69s-52.18-112.65-52.18-251.69 
+              23.36-251.69 52.18-251.69 52.18 112.65 52.18 251.69z" />
+              </svg>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:breerahanif62@gmail.com?subject=Contact%20from%20Portfolio"
+              class="hover:text-white transition-colors" title="Email" id="email-link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6">
+                <path d="M1.5 4.5h21v15h-21v-15zm1.5 2.25v.511l9 6.364 9-6.364v-.511h-18zm18 
+              10.5v-7.186l-9 6.364-9-6.364v7.186h18z" />
+              </svg>
+            </a>
           </div>
         </div>
-        <img src="assets/main_image.jpg" alt="Preview of Android apps"
-          class="rounded-2xl shadow-lg border border-slate-700" />
+
+        <!-- Right Image -->
+        <div class="flex justify-center md:justify-end">
+          <img src="assets/breera.jpeg" alt="Preview of Android apps"
+            class="w-80 h-80 rounded-full border-4 border-indigo-600 shadow-lg object-cover" />
+        </div>
       </div>
     </section>
+
 
     <!-- Projects -->
     <section id="projects" class="scroll-mt-24 py-20 bg-gray-900 text-gray-100">
@@ -189,7 +195,7 @@
           <article class="group rounded-2xl bg-gray-800 p-4 transition hover:shadow-lg">
             <img class="rounded-xl" src="assets/edb.png" alt="Project screenshot" />
             <h3 class="mt-4 text-lg font-semibold text-white">EDB Business Banking - UAE</h3>
-            <p class="mt-1 text-sm text-gray-400"> a cutting-edge digital banking solution enabling UAE businesses and
+            <p class="mt-1 text-sm text-gray-400"> A cutting-edge digital banking solution enabling UAE businesses and
               entrepreneurs to open accounts, apply for loans, and manage finances 100% online.</p>
             <ul class="mt-2 flex flex-wrap gap-2 text-xs">
               <li class="rounded-full bg-gray-700 text-gray-300 px-2 py-1">Kotlin</li>
@@ -208,7 +214,8 @@
           <article class="group rounded-2xl bg-gray-800 p-4 transition hover:shadow-lg">
             <img class="rounded-xl" src="assets/scan-x.png" alt="Project screenshot" />
             <h3 class="mt-4 text-lg font-semibold text-white">ScanX SDK</h3>
-            <p class="mt-1 text-sm text-gray-400">AI-Powered KYC & AML Compliance SDK for Banking & Fintech</p>
+            <p class="mt-1 text-sm text-gray-400">AI-Powered KYC & AML compliance, and customisable SDK for Banking &
+              Fintech</p>
             <ul class="mt-2 flex flex-wrap gap-2 text-xs">
               <li class="rounded-full bg-gray-700 text-gray-300 px-2 py-1">Media Pipe </li>
               <li class="rounded-full bg-gray-700 text-gray-300 px-2 py-1">TensorFlow</li>
@@ -226,7 +233,7 @@
           <article class="group rounded-2xl bg-gray-800 p-4 transition hover:shadow-lg">
             <img class="rounded-xl" src="assets/yap_pk.png" alt="Project screenshot" />
             <h3 class="mt-4 text-lg font-semibold text-white">YAP Pakistan – Fintech Banking App</h3>
-            <p class="mt-1 text-sm text-gray-400">YAP Pakistan, a secure and user-friendly digital banking app enabling
+            <p class="mt-1 text-sm text-gray-400">YAP Pakistan, A secure and user-friendly digital banking app enabling
               customers to manage accounts, transfer funds, pay bills, and perform KYC verification directly from their
               mobile devices.</p>
             <ul class="mt-2 flex flex-wrap gap-2 text-xs">
@@ -246,7 +253,7 @@
           <article class="group rounded-2xl bg-gray-800 p-4 transition hover:shadow-lg">
             <img class="rounded-xl" src="assets/sell3sixty.png" alt="Project screenshot" />
             <h3 class="mt-4 text-lg font-semibold text-white">SELL360</h3>
-            <p class="mt-1 text-sm text-gray-400">a powerful and intuitive order booking solution, specially designed
+            <p class="mt-1 text-sm text-gray-400">A powerful and intuitive order booking solution, specially designed
               for businesses in the FMCG and CPG industries.</p>
             <ul class="mt-2 flex flex-wrap gap-2 text-xs">
               <li class="rounded-full bg-gray-700 text-gray-300 px-2 py-1">JAVA</li>
@@ -282,16 +289,123 @@
       </div>
     </section>
 
+    <!-- What I Do -->
+    <section class="mx-auto max-w-6xl px-4 bg-slate-900">
+      <div class="grid items-center gap-8 md:grid-cols-3">
+        <!-- Left container -->
+        <div class="md:col-span-2">
+          <h3 class="text-3xl font-bold">What I do</h3>
+          <p class="mt-2 text-slate-400 max-w-2xl">
+            From understanding your requirements, designing a blueprint and delivering the final product, I do
+            everything
+            that falls in between these lines.
+          </p>
+
+          <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Service 1 -->
+            <div class="rounded-2xl border border-slate-700 p-6 hover:bg-slate-800 transition">
+              <div class="mb-4 text-indigo-500">
+                <!-- icon -->
+                <!-- Shield with checkmark - represents security and trust -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg">Secure Fintech Solutions</h3>
+              <p class="mt-2 text-slate-400">Build trust with robust security and seamless transactions.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="rounded-2xl border border-slate-700 p-6 hover:bg-slate-800 transition">
+              <div class="mb-4 text-indigo-500">
+                <!-- Shopping cart -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13v4a2 2 0 01-2 2H9a2 2 0 01-2-2v-4m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg">Ecommerce Platforms for Success</h3>
+              <p class="mt-2 text-slate-400">Drive sales with efficient order management and easy checkouts.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="rounded-2xl border border-slate-700 p-6 hover:bg-slate-800 transition">
+              <div class="mb-4 text-indigo-500">
+                <!-- Cog/Settings gear -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-lg">Tailored Business Solutions</h3>
+              <p class="mt-2 text-slate-400">Enhance productivity with custom tools and automation.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Right Image -->
+        <div class="md:col-span-1 flex justify-center md:justify-end">
+          <img src="assets/main_image.jpg" alt="Preview of Android apps"
+            class="w-80 h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] border-4 border-indigo-600 shadow-lg object-cover" />
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="scroll-mt-24 py-20 bg-slate-900 text-slate-100">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-3xl font-bold">Latest Blogs</h2>
+        <p class="mt-2 text-slate-400 max-w-2xl">Sharing insights, tutorials, and tips from my experience in mobile
+          development and tech.</p>
+
+        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Blog Card 1 -->
+          <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:bg-slate-700 transition">
+            <h3 class="font-semibold text-lg">Coroutine Cancellation</h3>
+            <p class="mt-2 text-slate-400 text-sm">Learn how coroutine cancellation works under the hood. Boost your
+              Asynchroneous programming skills.
+            </p>
+            <a href="https://medium.com/@breerahanif62/coroutine-cancellation-a194402b9a0a" target="_blank"
+              rel="noopener" class="mt-3 inline-block text-indigo-500 hover:underline">Read More</a>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:bg-slate-700 transition">
+            <h3 class="font-semibold text-lg">Enums vs. Sealed Classes</h3>
+            <p class="mt-2 text-slate-400 text-sm">Understand real diffrence b/w Enums vs. Sealed Classes with real
+              examples.
+            </p>
+            <a href="http://medium.com/@breerahanif62/kotlin-enums-vs-sealed-classes-understanding-the-differences-f78075aeae1a"
+              target="_blank" rel="noopener" class="mt-3 inline-block text-indigo-500 hover:underline">Read More</a>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:bg-slate-700 transition">
+            <h3 class="font-semibold text-lg">Composite Build System</h3>
+            <p class="mt-2 text-slate-400 text-sm">Follow my step by step journey of Migration from BuildSrc to
+              Composite Build System</p>
+            <a href="https://medium.com/@breerahanif62/migration-from-buildsrc-to-composite-build-system-494da5667a95"
+              class="mt-3 inline-block text-indigo-500 hover:underline" target="_blank" rel="noopener">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Experience -->
     <section id="experience" class="scroll-mt-24 border-t border-slate-700 py-20 bg-slate-900">
       <div class="mx-auto max-w-6xl px-4">
         <h2 class="text-2xl font-semibold text-slate-100 md:text-3xl">Experience</h2>
         <ol class="mt-8 space-y-6">
-          <!-- Digitify -->
+          <!-- Digitify Senior-->
           <li class="rounded-2xl border border-slate-700 bg-slate-800 p-4">
             <div class="flex items-center justify-between gap-4">
               <h3 class="text-lg font-semibold text-slate-100">Sr. Software Engineer(Mobile) — Digitify</h3>
-              <span class="text-sm text-slate-400">2021 — Present</span>
+              <span class="text-sm text-slate-400">2022 — Present</span>
             </div>
             <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-300">
               <li>Increased onboarding accuracy by 20% for users by automating KYC with Scanning SDK, including
@@ -316,6 +430,16 @@
               <li> Awarded Process Excellence Award for improving sprint efficiency by 10% by coordinating with
                 cross-functional teams on planning and delivery
               </li>
+            </ul>
+
+          </li>
+          <!-- Digitify -->
+          <li class="rounded-2xl border border-slate-700 bg-slate-800 p-4">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-semibold text-slate-100">Software Engineer(Mobile) — Digitify</h3>
+              <span class="text-sm text-slate-400">2021 — 2022</span>
+            </div>
+            <ul class="mt-2 list-disc space-y-1 pl-5 text-slate-300">
               <li> Revamped the dashboard with advanced transaction categorization, time-period insights, multi-currency
                 conversion, and filterable detailed views, giving
                 users actionable financial intelligence.</li>
@@ -326,7 +450,6 @@
                 increasing app engagement through personalized
                 financial analytics.</li>
             </ul>
-
           </li>
           <!-- Allomate -->
           <li class="rounded-2xl border border-slate-700 bg-slate-800 p-4">
@@ -396,8 +519,6 @@
       </div>
     </section>
 
-
-
     <!-- Contact -->
     <section id="contact" class="scroll-mt-24 border-t border-slate-700 py-20">
       <div class="mx-auto max-w-6xl px-4">
@@ -406,23 +527,23 @@
 
         <div class="mt-6 grid gap-6 md:grid-cols-2">
           <!-- Contact Form -->
-          <form class="rounded-2xl border border-slate-700 bg-slate-800 p-4" name="contact" netlify>
+          <form id="contactForm" class="rounded-2xl border border-slate-700 bg-slate-800 p-4" name="contact" netlify>
             <label class="block text-sm text-slate-300">Name
-              <input
+              <input id="name"
                 class="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 type="text" name="name" required />
             </label>
             <label class="mt-4 block text-sm text-slate-300">Email
-              <input
+              <input id="email"
                 class="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 type="email" name="email" required />
             </label>
             <label class="mt-4 block text-sm text-slate-300">Message
-              <textarea
+              <textarea id="message"
                 class="mt-1 w-full rounded-xl border border-slate-700 bg-slate-900 text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 name="message" rows="4" required></textarea>
             </label>
-            <button type="submit"
+            <button id="submit" type="submit"
               class="mt-4 rounded-2xl bg-indigo-600 px-5 py-2.5 text-white hover:bg-indigo-700 transition">Send</button>
           </form>
 
@@ -501,5 +622,7 @@
       </div>
     </section>
   </main>
+  <script src="script.js"></script>
 </body>
+
 </html>
