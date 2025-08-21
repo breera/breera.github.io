@@ -57,10 +57,35 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const subject = encodeURIComponent("New message from " + name);
   const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
 
-  // Open default email app (Gmail, Outlook, etc.)
+  // Track if user left the page (email app opened)
+  let hasLeftPage = false;
+  
+  // Detect when user leaves/returns to page
+  const handleVisibilityChange = () => {
+    if (document.hidden) {
+      hasLeftPage = true; // User left the page (email app likely opened)
+    }
+  };
+
+  const handleFocus = () => {
+    hasLeftPage = true; // User returned to page (email app was opened)
+  };
+
+  // Add event listeners
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+  window.addEventListener('focus', handleFocus);
+
+  // Open email app
   window.location.href = `mailto:breerahanif62@gmail.com?subject=${subject}&body=${body}`;
-  // Fallback error message after delay
+
+  // Only show error if user didn't leave the page
   setTimeout(() => {
-    alert("It looks like no email app is installed or configured on your device. You can email me directly at: breerahanif62@gmail.com");
-  }, 2000);
+    if (!hasLeftPage) {
+      alert("It looks like no email app is installed or configured on your device. You can email me directly at: breerahanif62@gmail.com");
+    }
+    
+    // Clean up event listeners
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    window.removeEventListener('focus', handleFocus);
+  }, 3000); // Increased delay to 3 seconds
 });
