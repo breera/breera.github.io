@@ -35,7 +35,7 @@ It showcases my **skills, experience, projects, and blog posts**, and provides a
 Clone the repo and open in your browser:
 
 
-git clone https://github.com/your-username/portfolio.git
+git clone [https://github.com/breera/breera.github.io.git](https://github.com/breera/breera.github.io.git)
 
 ----
 
